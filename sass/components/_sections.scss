@@ -1,0 +1,252 @@
+// Header
+header {
+    background: linear-gradient(to right, #eff2f6 60%, #ff343d 30%);
+    height: 600px;
+}
+
+// Navigation 
+.nav-split {
+    @include flex; justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    padding-top: 20px;
+    padding-bottom: 30px;
+
+
+    #buyNow {
+        margin-right: 10px;
+        text-transform: uppercase;
+    }
+}
+
+// Header Section
+#main-header-wrapper {
+    @include flex;
+    align-items: center;
+    height: 500px;
+}
+
+.main-header {
+    @include flex;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1;
+    // position: relative;
+
+    .header-left {
+        padding-left: 15px;
+        
+    }
+
+    .header-right {
+        @include flex;
+        justify-content: flex-end;
+    }
+    #marsText {
+        text-transform: uppercase;
+        transform: rotate(90deg);
+        transform-origin: right top;
+        font-size: 9em;
+        color: #ff343d;
+        text-shadow: 0.1px 0.1px 7px rgba(0, 0, 0, 0.288);
+        margin-left: -250px;
+        margin-top: 300%;
+    }
+}
+
+.drone-img {
+    @include flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 500px;
+    z-index: 9;
+
+    & img {
+        @include img-resp;
+        // width: 200px;
+        // height: auto;
+    }
+}
+
+// Fly High Section 
+
+.col-3-fly {
+    @include flex;
+    height: 250px;
+
+    .box-1 {
+        @include img-resp;
+        @include flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url("/images/drone-1.png");
+        background-size: cover;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 40%;
+
+        .box-1-text {
+            
+        }
+    }
+
+    .box-2 {
+        @include flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-grow: 2;
+        background-image: url("/images/aerial-shot.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+
+        .sub-box-2 {
+            @include flex;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            height: 100%;
+            color: #fff;
+            ;
+            background-color: rgba(0, 0, 0, 0.548);  
+        }
+    }
+}
+
+// Features
+
+#features h1 {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.feature-list {
+    @include flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 40px;
+
+    .feat-icon {
+      @include flex-col;
+      align-items: center;
+
+      & img {
+          margin-bottom: 30px;
+      }
+    }
+}
+
+// View More Section
+
+#view-more {
+    @include flex;
+
+    .img-controller {
+        flex: 1;
+
+        & img {
+            @include img-resp;
+        }
+    }
+
+    .newGen {
+        flex: 1;
+        @include flex-col;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        background-color: #232323;
+        font-size: 2em;
+        & h1 {
+            line-height: 1.2;
+        }
+
+         & .gen-colorTxt {
+             color: #ff343d;
+         }
+
+         & .gen-colorPeriod{
+            color: #ff343d;
+        }
+
+         .newGen-btn {
+             align-self: center;
+
+             & button {
+                 border: 1px solid #fff;
+                 background-color: transparent;
+                 color: #fff;
+                 padding: 5px 10px;
+                 border-radius: 20px; 
+                 font-size: 18px;
+             }
+         }
+    }
+}
+
+// New Gen Section 
+
+#newGen {
+    @include flex;
+
+    .newGen-txt {
+        @include flex-col;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+    }
+
+    .products-btn button {
+        border: 1px solid #000;
+        background-color: transparent;
+        color: #000;
+        padding: 5px 10px;
+        border-radius: 20px; 
+        font-size: 18px;
+    }
+    .drone-side-img {
+        flex: 1;
+
+        & img {
+            @include img-resp;
+        }
+    }
+}
+
+// Journey Section
+
+#journey {
+    @include flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    background-image: url("/images/journey.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    .journey-txt {
+        margin-top: 20%;
+
+        & h1 {
+            color: #fff;
+            font-size: 3em;
+        }
+    }
+    .journey-btn {
+        @include flex;
+        justify-content: center;
+        margin-top: 20px;
+
+        & button {
+            border: 1px solid #fff;
+            background-color: #fff;
+            color: #3f9f7f;
+            padding: 5px 10px;
+            border-radius: 20px; 
+            font-size: 19px;
+            font-weight: bold;
+        }
+    }
+}
